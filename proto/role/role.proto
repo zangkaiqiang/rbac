@@ -1,0 +1,21 @@
+syntax = "proto3";
+package role;
+
+service RoleService {
+	rpc CreateRole(Role) returns (Response){}
+	rpc GetPermission(Role) returns (Permission){}
+}
+
+message Permission{
+	int32 id = 1;
+}
+
+message Role {
+	int32 id = 1;
+	int32 name = 2;
+	repeated Permission permission = 3;
+}
+
+message Response {
+	bool created = 1;
+}

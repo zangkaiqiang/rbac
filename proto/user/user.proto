@@ -1,0 +1,23 @@
+syntax = "proto3";
+package user;
+
+service UserService{
+	rpc CreateUser(User) returns (Response){}
+}
+
+message Role{
+	int32 id=1;
+	string name=2;
+}
+
+message User{
+	int32 id=1;
+	string name=2;
+	Role role=3;
+}
+
+message Response{
+	bool created=1;
+	User user=2;
+}
+
