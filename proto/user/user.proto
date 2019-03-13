@@ -1,13 +1,20 @@
 syntax = "proto3";
-package user;
+package libgo.rbac.user;
 
 service UserService{
 	rpc CreateUser(User) returns (Response){}
+	rpc GetRole(User) returns (Role){}
+	rpc GetAccessPermission(User) returns (Permission) {}
+//	rpc UpdateUserRole(User) returns (User) {}
 }
 
 message Role{
 	int32 id=1;
-	string name=2;
+}
+
+message Permission {
+	int32 id = 1;
+	string name = 2;
 }
 
 message User{

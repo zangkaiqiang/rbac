@@ -1,0 +1,16 @@
+{
+	{
+		"id":1,
+		"name":"R1",
+		"permission":{
+			"id":1
+		}
+	},
+	{
+		"id":2,
+		"name":"R2",
+		"permission":{
+			"id":3
+		}
+	}
+}

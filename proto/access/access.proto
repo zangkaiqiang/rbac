@@ -1,0 +1,24 @@
+syntax = "proto3";
+package libgo.rbac.access;
+
+service AccessService {
+	rpc CreateAccessPermission(Permission) returns (Response) {}
+	rpc GetAllAccessPermission(Request) returns (Response) {}
+	rpc GetPermissionById(Id) returns (Permission) {}
+}
+
+message Permission {
+	int32 id = 1;
+	string name = 2;
+}
+
+message Response {
+	bool created = 1;	
+}
+
+message Request {}
+
+message Id {
+	int32 id = 1;	
+}
+
