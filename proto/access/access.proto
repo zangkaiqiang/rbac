@@ -3,7 +3,6 @@ package libgo.rbac.access;
 
 service AccessService {
 	rpc CreateAccessPermission(Permission) returns (Response) {}
-	rpc GetAllAccessPermission(Request) returns (Response) {}
 	rpc GetPermissionById(Id) returns (Permission) {}
 }
 
@@ -15,8 +14,6 @@ message Permission {
 message Response {
 	bool created = 1;	
 }
-
-message Request {}
 
 message Id {
 	int32 id = 1;	
