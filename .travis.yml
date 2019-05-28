@@ -1,3 +1,6 @@
 language: go
 go: 1.12
 script: true
+notifications:
+  slack:
+    on_success:always
